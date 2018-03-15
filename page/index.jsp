@@ -14,10 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <meta name="description" content="">
     <link rel="shortcut icon" href="image/favicon.ico">
  
-    <link rel="stylesheet" href="css/lib/weui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/public.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <script src="js/lib/jquery.min.js" type="text/javascript"></script>
+    <%@include file="common/link.jsp"%>
 </head>
 <body>
     <header>
@@ -120,13 +117,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
     </section>
 
-    <section class="bgwh mt10">
+    <section class="bgwh mt10" id="proTypeApp">
         <div class="list-tit">
             <span class="gm f16">好物推荐</span>
             <a class="more">更多>></a>
         </div>
     
-        <div class="rel" id="proTypeApp">
+        <div class="rel">
             <div class="weui-flex pro-type">
                 <div class="pro-type__item" :class="{gm: currentIndex == 0}" @click="changeType(0)">猜你喜欢</div>
                 <div class="pro-type__item" :class="{gm: currentIndex == 1}" @click="changeType(1)">平台推荐</div>
@@ -136,13 +133,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="active-line" :style="styleObject"></div>
         </div>
 
-        <div class="list-zt fix">
-            <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
-            <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
-            <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
-            <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
-            <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
-            <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
+        <div class="fix">
+            <div class="list-zt__item product__item" v-for="item in 4">
+                <div class="product-cover"><img :src="'image/test/p' + (item) + '.png'"/></div>
+                <p class="ell mt5">LAVER防脱育发液</p>
+                <div class="fix">
+                    <del class="l">￥128.00</del> 
+                    <p class="r">限免<span class="gm">50</span>份</p>
+                </div>
+                <div class="apply-btn mt5">免费申请</div>
+            </div>
         </div>
     </section>
 
