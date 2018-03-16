@@ -7,7 +7,7 @@ html {
 body{
 	line-height: 1.4;
 	width: 12.42rem;
-	background-color: #f5f5f5/* #FBF8FF */;
+	background-color: #f8f8f8/* #FBF8FF */;
 	min-height: 100%;
 	font-size: 12px;
 	color: #666;
@@ -258,8 +258,42 @@ header .title{ line-height: 30px; }
 	background-size: cover;
 	padding: 25px 20px;
 }
-.user-top .portrait{
+
+.portrait{
 	height: 46px;
 	width: 46px;
 	border-radius: 50%;
+}
+
+.layer{
+	z-index: 99;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	transition:  transform .3s ease;
+	-webkit-transition:  transform .3s ease;
+	transform: translate(0,-100%);
+	-webkit-transform: translate(0,-100%);
+}
+.layer.open{
+	transform: translate(0,0);
+	-webkit-transform: translate(0,0);
+}
+
+.mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.82);
+}
+.layer-inner{
+	z-index: 1;
+	position: relative;
+	background-color: #fff;
+	overflow: hidden;
+	padding-bottom: 20px;
 }
