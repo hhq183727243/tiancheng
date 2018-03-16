@@ -5,10 +5,13 @@ html {
     font-size: 25.764895330112722px;
 }
 body{
+	line-height: 1.4;
 	width: 12.42rem;
 	background-color: #f5f5f5/* #FBF8FF */;
 	min-height: 100%;
 	font-size: 12px;
+	color: #666;
+	font: pingfang,Tahoma,Helvetica,Arial,\\5B8B\4F53,sans-serif;
 }
 /* header */
 header{
@@ -21,8 +24,15 @@ header{
 	color: #fff;
 	background: -webkit-linear-gradient(left,#fff742,#ffc300) no-repeat;
 }
-
+header .title{ line-height: 30px; }
 .weui-tabbar{ position: fixed; }
+.weui-btn:active{
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+.weui-cells{ font-size: 12px; }
+.weui-cell__hd img{ width: 22px;height: 22px;margin-right: 5px; }
 
 /*轮播*/
 .slider { position:relative; overflow:hidden; display:none; margin:0 auto; }
@@ -239,4 +249,17 @@ header{
 }
 .category-list__item.active:after{
 	transform: translate(0,0);
+}
+
+
+/* 个人中心 */
+.user-top{
+	background-image: url('../image/user/portrait-bg.jpg');
+	background-size: cover;
+	padding: 25px 20px;
+}
+.user-top .portrait{
+	height: 46px;
+	width: 46px;
+	border-radius: 50%;
 }

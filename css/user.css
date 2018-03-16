@@ -1,0 +1,51 @@
+@charset "utf-8";
+body{ background-color: #fff; }
+
+button, input, select, textarea {
+    outline: none;
+    font-size: 100%;
+}
+
+.login-form{
+	padding: 1.2rem .8rem .2rem;
+    background-color: #fff;
+}
+
+.field__item{
+	width: 100%;
+    border-bottom: 1px solid #eee;
+    padding: .4rem 0;
+    margin-bottom: .4rem;
+}
+
+.field__item input {
+    width: 8.5rem;
+    height: .7rem;
+    font-size: .52rem;
+    color: #757575;
+    padding: 0 .3rem;
+    border: none;
+    letter-spacing: .02rem;
+    line-height: .7rem;
+}
+
+.field__item i{
+	float: left;
+    width: .68rem;
+    height: .7rem;
+    vertical-align: bottom;
+    color: #cfcfd3;
+}
+.icon-user {
+    background: url('../image/icon/user.png') no-repeat 0 0;
+    background-size: cover;
+}
+
+.field__item .code{ width: auto; }
+.field__item .weui-vcode-btn{
+	line-height: 18px;
+	height: 18px;
+	padding: 0 0 0 .7em;
+	font-size: 12px;
+	color: #fcc103;
+}
