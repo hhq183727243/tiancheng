@@ -16,7 +16,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="css/lib/swiper-3.4.2.min.css" type="text/css">
     <%@include file="../common/link.jsp"%>
 </head>
-<body>
+<body> 
+    <header class="bottom-line">
+        <div class="weui-flex aic container">
+            <div class="w30 ml10" id="returnBtn">
+                <img width="30" src="image/icon/return.png" alt="">
+            </div>
+            <div class="weui-flex__item tc f16">个人资料</div>
+            <div class="w30 mr10"></div>
+        </div>
+    </header>
+    <div style="height: 42px;"></div>
+
     <section id="App">
         <div class="weui-cells__title">个人资料</div>
         <div class="weui-cells">

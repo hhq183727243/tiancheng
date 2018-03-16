@@ -18,11 +18,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body>
     <section id="App">
-        <div class="user-top weui-flex aic">
-            <div><img class="portrait" src="image/test/p1.png"/></div>
-            <div class="ml20 wh f16">刘德华</div>
-            <div class="weui-flex__item tr">
-                <a class="icon-set"><img width="26" src="image/icon/set.png" alt=""></a>
+        <div class="user-top wh">
+            <div class="fix lh22">
+                <a class="l" href="page/user/userInfo.jsp"><img width="22" src="image/icon/set.png" alt=""> 设置</a>
+                <a class="r"><img width="22" src="image/icon/kefu.png" alt=""> 咨询甜橙</a>
+            </div>
+            <div class="weui-flex mt10 aic">
+                <div><img class="portrait" src="image/test/p1.png"/></div>
+                <div class="ml20 f16">刘德华</div>
+                <div class="weui-flex__item tr lh22">
+                    <img width="22" src="image/icon/renwu.png" alt=""> 新手任务
+                </div>
             </div>
         </div>
         <div class="weui-flex pt10 pb10 bottom-line bgwh tc">
@@ -71,10 +77,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
 
         <div class="weui-cells">
+            <a class="weui-cell weui-cell_access" href="page/user/followUp_list.jsp">
+                <div class="weui-cell__hd"><img src="image/icon/guanzhu.png" alt=""></div>
+                <div class="weui-cell__bd">我的关注</div>
+                <div class="weui-cell__ft"></div>
+            </a>
             <a class="weui-cell weui-cell_access" href="javascript:;">
-                <div class="weui-cell__hd"><img src="image/icon/order.png" alt=""></div>
-                <div class="weui-cell__bd">我的订单</div>
-                <div class="weui-cell__ft">查看全部订单</div>
+                <div class="weui-cell__hd"><img src="image/icon/zuji.png" alt=""></div>
+                <div class="weui-cell__bd">我的足迹</div>
+                <div class="weui-cell__ft"></div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd"><img src="image/icon/youhuiquan.png" alt=""></div>
+                <div class="weui-cell__bd">我的必中券</div>
+                <div class="weui-cell__ft"></div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd"><img src="image/icon/fankui.png" alt=""></div>
+                <div class="weui-cell__bd">好友邀请</div>
+                <div class="weui-cell__ft"></div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="page/user/questionAndAnswer.jsp">
+                <div class="weui-cell__hd"><img src="image/icon/bangzhu.png" alt=""></div>
+                <div class="weui-cell__bd">帮助与客服</div>
+                <div class="weui-cell__ft"></div>
             </a>
         </div>
     </section>

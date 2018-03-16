@@ -33,6 +33,13 @@ header .title{ line-height: 30px; }
 }
 .weui-cells{ font-size: 12px; }
 .weui-cell__hd img{ width: 22px;height: 22px;margin-right: 5px; }
+.weui-dialog__btn_primary{ color: #ffc300; }
+.fixed-buttom{
+	position: fixed;
+    z-index: 500;
+    bottom: 0;
+    width: 100%;
+}
 
 /*轮播*/
 .slider { position:relative; overflow:hidden; display:none; margin:0 auto; }
@@ -254,9 +261,8 @@ header .title{ line-height: 30px; }
 
 /* 个人中心 */
 .user-top{
-	background-image: url('../image/user/portrait-bg.jpg');
-	background-size: cover;
-	padding: 25px 20px;
+	background: -webkit-linear-gradient(left,#f3e800,#ffc300) no-repeat;
+	padding: 10px 20px;
 }
 
 .portrait{
@@ -297,3 +303,12 @@ header .title{ line-height: 30px; }
 	overflow: hidden;
 	padding-bottom: 20px;
 }
+
+.follow-up-list .icon-check{
+	position: absolute;
+	top: -12px;
+    left: -18px;
+    color: #ccc;
+}
+
+.follow-up-list .checked.icon-check{ color: #fcc103; }

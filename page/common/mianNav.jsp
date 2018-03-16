@@ -18,7 +18,7 @@
         <img src="image/icon/jindu.png" class="weui-tabbar__icon">
         <p class="weui-tabbar__label">试用进展</p>
     </a>
-    <a href="javascript:;" class="weui-tabbar__item">
+    <a href="page/user/userIndex.jsp" class="weui-tabbar__item">
         <img src="image/icon/user.png" class="weui-tabbar__icon">
         <p class="weui-tabbar__label">个人中心</p>
     </a>
