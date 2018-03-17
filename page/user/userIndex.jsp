@@ -32,18 +32,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </div>
         </div>
         <div class="weui-flex pt10 pb10 bottom-line bgwh tc">
-            <div class="weui-flex__item bre">
+            <a class="weui-flex__item bre" href="page/wealth/coinDetail.jsp">
                 <p>0.00</p>
                 <p class="mt5">金币余额</p>
-            </div>
-            <div class="weui-flex__item bre">
+            </a>
+            <a class="weui-flex__item bre" href="page/wealth/cashshow.jsp">
                 <p>0.00</p>
                 <p class="mt5">可提现余额</p>
-            </div>
-            <div class="weui-flex__item">
+            </a>
+            <a class="weui-flex__item" href="page/wealth/cashback.jsp">
                 <p>0.00</p>
                 <p class="mt5">确认中余额</p>
-            </div>
+            </a>
         </div>
 
         <div class="weui-cells">
@@ -82,17 +82,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="weui-cell__bd">我的关注</div>
                 <div class="weui-cell__ft"></div>
             </a>
-            <a class="weui-cell weui-cell_access" href="javascript:;">
+            <a class="weui-cell weui-cell_access" href="page/user/historyRecord_list.jsp">
                 <div class="weui-cell__hd"><img src="image/icon/zuji.png" alt=""></div>
                 <div class="weui-cell__bd">我的足迹</div>
                 <div class="weui-cell__ft"></div>
             </a>
-            <a class="weui-cell weui-cell_access" href="javascript:;">
+            <a class="weui-cell weui-cell_access" href="page/user/coupons_list.jsp">
                 <div class="weui-cell__hd"><img src="image/icon/youhuiquan.png" alt=""></div>
                 <div class="weui-cell__bd">我的必中券</div>
                 <div class="weui-cell__ft"></div>
             </a>
-            <a class="weui-cell weui-cell_access" href="javascript:;">
+            <a class="weui-cell weui-cell_access" href="page/invitation/invitation_index.jsp">
                 <div class="weui-cell__hd"><img src="image/icon/fankui.png" alt=""></div>
                 <div class="weui-cell__bd">好友邀请</div>
                 <div class="weui-cell__ft"></div>

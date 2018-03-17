@@ -11,7 +11,7 @@ body{
 	min-height: 100%;
 	font-size: 12px;
 	color: #666;
-	font: pingfang,Tahoma,Helvetica,Arial,\\5B8B\4F53,sans-serif;
+	font: 12px/1.4 pingfang,Tahoma,Helvetica,Arial,\\5B8B\4F53,sans-serif;
 }
 /* header */
 header{
@@ -26,12 +26,14 @@ header{
 }
 header .title{ line-height: 30px; }
 .weui-tabbar{ position: fixed; }
+.weui-btn{ line-height: 1.3rem; font-size: .6rem}
 .weui-btn:active{
 	position: relative;
 	top: 1px;
 	left: 1px;
 }
-.weui-cells{ font-size: 12px; }
+.weui-btn_mini{ padding: 0 10px; line-height: 1.8; }
+.weui-cells{ font-size: .5rem; }
 .weui-cell__hd img{ width: 22px;height: 22px;margin-right: 5px; }
 .weui-dialog__btn_primary{ color: #ffc300; }
 .fixed-buttom{
@@ -312,3 +314,69 @@ header .title{ line-height: 30px; }
 }
 
 .follow-up-list .checked.icon-check{ color: #fcc103; }
+
+/* 优惠券 */
+.coupons-list__item{
+    margin: 10px;
+    background-color: #fff;
+    padding: 15px 15px 20px;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+    border-left: 8px solid #f8426d;
+}
+.coupons-list__item .weui-flex__item{ border-right: 1px dashed #aaa; }
+.coupons-list__item .usered{ 
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px dashed #aaa;
+    line-height: 40px;
+    text-align: center;
+    color: #999;
+    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+}
+
+.activity-voucher {
+    min-height: 22rem;
+    background: -webkit-linear-gradient(top,#ffb50f,#ffffff) no-repeat;
+}
+
+.activity-voucher .weui-navbar{ position: relative; }
+.activity-voucher .weui-navbar:after{ border-bottom-color: #fdd63a; }
+.activity-voucher .rank-list{
+    min-height: 5rem;
+    max-height: 72.8rem;
+    border: .06rem dashed #fe4a31;
+    border-radius: .2rem;
+    margin: -10px 15px 20px;
+    background-color: #fff;
+}
+.activity-voucher .rank-list .icon-rank{ 
+	height: .8rem;
+    width: .6rem;
+}
+.activity-voucher .rank-list .num {
+	display: block;
+	width: .6rem;
+    height: .6rem;
+    line-height: .6rem;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    background-color: #b3c9d6;
+}
+.activity-voucher .rank-list .portrait{ 
+	width: 1.3rem;
+	height: 1.3rem;
+}
+
+/* 金币管理 */
+.coin-bg{
+	background: url(https://img.daliangju.com/upload/20170616/1497591870457hbusc2.jpg) no-repeat;
+    background-size: cover;
+    padding: 1.2rem 1rem 1rem;
+    text-align: center;
+}
