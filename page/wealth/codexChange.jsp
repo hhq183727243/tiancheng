@@ -33,15 +33,32 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="weui-flex pro-type">
                 <div class="pro-type__item" :class="{gm: currentIndex == 0}" @click="changeType(0)">综合排序</div>
                 <div class="pro-type__item" :class="{gm: currentIndex == 1}" @click="changeType(1)">
-                    <span>价格排序</span><img class="vtb" width="18" src="image/wealth/sort.png" alt="">
+                    <span>价格排序</span><img class="vtb" width="18" :src="'image/wealth/' + priceSortType + '.png'" alt="">
                 </div>
                 <div class="pro-type__item" :class="{gm: currentIndex == 2}" @click="changeType(2)">
-                    <span>剩余份数</span><img class="vtb" width="18" src="image/wealth/sort.png" alt="">
+                    <span>剩余份数</span><img class="vtb" width="18" :src="'image/wealth/' + remainSortType + '.png'" alt="">
                 </div>
             </div>
             <div class="active-line pct33" :style="styleObject"></div>
         </div>
 
+        <div class="fix">
+            <div class="list-zt__item product__item" v-for="item in 4">
+                <div class="product-cover">
+                    <img :src="'image/test/p' + (item) + '.png'"/>
+                    <div class="txt">
+                        <span>剩余22份</span>
+                    </div>
+                </div>
+                <div class="ell mt5">LAVER防脱育发液</div>
+                <div class="mt5">
+                    <span class="gm">50金币</span>
+                    <del class="g9">免￥12</del>
+                </div>
+            </div>
+        </div>
+
+        <%@include file="../common/loading.jsp"%>
     </section>
 </body>
 <script src="js/lib/vue.js" type="text/javascript"></script>
@@ -54,9 +71,16 @@ $(function(){
     new Vue({
         el: '#App',
         data: {
-            currentIndex: 0
+            currentIndex: 0,
+            sortType: 'dec'
         },
         computed: {
+            priceSortType: function(){
+                return this.currentIndex == 1 ? (this.sortType) : 'sort'
+            },
+            remainSortType: function(){
+                return this.currentIndex == 2 ? (this.sortType) : 'sort'
+            },
             styleObject: function(){
                 return {
                     'transform': 'translate(' + (this.currentIndex * 100) + '%,0)'
@@ -65,7 +89,12 @@ $(function(){
         },
         methods: {
             changeType: function(index){
-                this.currentIndex = index;
+                if(this.currentIndex == index){
+                    this.sortType = this.sortType == 'dec' ? 'asc' : 'dec';
+                }else{
+                    this.sortType = 'dec';
+                    this.currentIndex = index;
+                }
             }
         }
     });
