@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div><img class="portrait" src="image/test/p1.png"/></div>
                 <div class="ml20 f16">刘德华</div>
                 <div class="weui-flex__item tr lh22">
-                    <img width="22" src="image/icon/renwu.png" alt=""> 新手任务
+                    <a href="page/wealth/newTask.jsp"><img width="22" src="image/icon/renwu.png" alt=""> 新手任务</a>
                 </div>
             </div>
         </div>

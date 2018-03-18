@@ -52,6 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </div>
                 <div class="ell mt5">LAVER防脱育发液</div>
                 <div class="mt5">
+                    <span class="circle">兑</span>
                     <span class="gm">50金币</span>
                     <del class="g9">免￥12</del>
                 </div>

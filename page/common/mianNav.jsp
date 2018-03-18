@@ -6,7 +6,7 @@
         <img src="image/icon/home_on.png" class="weui-tabbar__icon">
         <p class="weui-tabbar__label">首页</p>
     </a>
-    <a href="javascript:;" class="weui-tabbar__item">
+    <a href="page/challenge/challenge_index.jsp" class="weui-tabbar__item">
         <img src="image/icon/tiaozhan.png" class="weui-tabbar__icon">
         <p class="weui-tabbar__label">每日挑战</p>
     </a>

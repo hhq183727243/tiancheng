@@ -34,7 +34,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="weui-cell__ft"><a class="btn">去完成</a></div>
             </div>
             
-            <div class="weui-cell" href="page/user/bangding.jsp">
+            <div class="weui-cell">
                 <div class="weui-cell__hd"><img src="image/wealth/shenqing.png" alt=""></div>
                 <div class="weui-cell__bd">
                     <h4>每日申请</h4>
@@ -46,9 +46,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <div class="ml5">50%</div>
                     </div>
                 </div>
-                <div class="weui-cell__ft"><a class="btn">去完成</a></div>
+                <div class="weui-cell__ft"><a class="btn" href="page/index.jsp">去完成</a></div>
             </div>
-            <div class="weui-cell" href="page/user/bangding.jsp">
+            <div class="weui-cell">
                 <div class="weui-cell__hd"><img src="image/wealth/yaoqing.png" alt=""></div>
                 <div class="weui-cell__bd">
                     <h4>邀请好友</h4>
@@ -57,14 +57,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="weui-cell__ft"><a class="btn" href="page/invitation/invitation_index.jsp">去完成</a></div>
             </div>
 
-            <div class="weui-cell" href="page/user/shenqing.jsp">
+            <div class="weui-cell">
                 <div class="weui-cell__hd"><img src="image/wealth/duihuan.png" alt=""></div>
                 <div class="weui-cell__bd">
                     <h4>金币兑换</h4>
                     <div class="g9">金币兑换好物</div>
                 </div>
                 <div class="weui-cell__ft">
-                    <span class="mr10 gm">+5金币</span><a class="btn finish">已完成</a>
+                    <span class="mr10 gm">+5金币</span><a class="btn finish" href="page/wealth/codexChange.jsp">已完成</a>
                 </div>
             </div>
 

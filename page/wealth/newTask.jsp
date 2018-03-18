@@ -31,7 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <h4 class="weui-flex__item">绑定手机号</h4>
                     <div class="w70 gm">+5金币</div>
                 </div>
-                <div class="weui-cell__ft"><a class="btn">立即绑定</a></div>
+                <div class="weui-cell__ft"><a class="btn" href="page/user/userInfo.jsp">立即绑定</a></div>
             </div>
             
             <div class="weui-cell" href="page/user/bangding.jsp">
@@ -40,24 +40,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <h4 class="weui-flex__item">填写收货地址</h4>
                     <div class="w70 gm">+5金币</div>
                 </div>
-                <div class="weui-cell__ft"><a class="btn">立即填写</a></div>
+                <div class="weui-cell__ft"><a class="btn" href="page/user/address.jsp">立即填写</a></div>
             </div>
-            <div class="weui-cell" href="page/user/bangding.jsp">
+            <div class="weui-cell">
                 <div class="weui-cell__hd"><img src="image/wealth/taobao.png" alt=""></div>
                 <div class="weui-cell__bd weui-flex">
                     <h4 class="weui-flex__item">绑定淘宝账号</h4>
                     <div class="w70 gm">+10金币</div>
                 </div>
-                <div class="weui-cell__ft"><a class="btn">立即绑定</a></div>
+                <div class="weui-cell__ft"><a class="btn" href="page/wealth/bindTaobao.jsp">立即绑定</a></div>
             </div>
 
-            <div class="weui-cell" href="page/user/shenqing.jsp">
+            <div class="weui-cell">
                 <div class="weui-cell__hd"><img src="image/wealth/bangding.png" alt=""></div>
                 <div class="weui-cell__bd weui-flex">
                     <h4 class="weui-flex__item">完成一次申请</h4>
                     <div class="w70 gm">+5金币</div>
                 </div>
-                <div class="weui-cell__ft"><a class="btn">立即申请</a></div>
+                <div class="weui-cell__ft"><a><img width="50" src="image/wealth/yilingqu.png" alt=""></a></div>
             </div>
 
             <div class="weui-cell" href="page/user/bangding.jsp">

@@ -45,18 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         }
     </style>
 </head>
-<body> 
-    <!-- <header class="bottom-line">
-        <div class="weui-flex aic container">
-            <div class="w30 ml10" id="returnBtn">
-                <img width="30" src="image/icon/return.png" alt="">
-            </div>
-            <div class="weui-flex__item tc f16">邀请好友</div>
-            <div class="w30 mr10"></div>
-        </div>
-    </header>
-    <div style="height: 42px;"></div> -->
-
+<body>
     <section id="App" class="activity-voucher">
         <div class="weui-navbar bgm">
             <div class="weui-navbar__item weui-bar__item_on">
