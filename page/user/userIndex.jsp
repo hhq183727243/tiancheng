@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <a class="r"><img width="22" src="image/icon/kefu.png" alt=""> 咨询甜橙</a>
             </div>
             <div class="weui-flex mt10 aic">
-                <div><img class="portrait" src="image/test/p1.png"/></div>
+                <div><img class="portrait" src="image/test/p1.jpg"/></div>
                 <div class="ml20 f16">刘德华</div>
                 <div class="weui-flex__item tr lh22">
                     <a href="page/wealth/newTask.jsp"><img width="22" src="image/icon/renwu.png" alt=""> 新手任务</a>
@@ -47,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
 
         <div class="weui-cells">
-            <a class="weui-cell weui-cell_access" href="javascript:;">
+            <a class="weui-cell weui-cell_access" href="page/user/dingdan.jsp">
                 <div class="weui-cell__hd"><img src="image/icon/order.png" alt=""></div>
                 <div class="weui-cell__bd">我的订单</div>
                 <div class="weui-cell__ft">查看全部订单</div>
@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <p class="mt5">已完成</p>
                 </a>
                 <a class="weui-flex__item">
-                    <p><img height="24" src="image/icon/renwu.png" alt=""></p>
+                    <p><img height="24" src="image/icon/zhuiping.png" alt=""></p>
                     <p class="mt5">追评任务</p>
                 </a>
             </div>

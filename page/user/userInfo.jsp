@@ -17,23 +17,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/link.jsp"%>
 </head>
 <body> 
-    <header class="bottom-line">
-        <div class="weui-flex aic container">
-            <div class="w30 ml10" id="returnBtn">
-                <img width="30" src="image/icon/return.png" alt="">
-            </div>
-            <div class="weui-flex__item tc f16">个人资料</div>
-            <div class="w30 mr10"></div>
-        </div>
-    </header>
-    <div style="height: 42px;"></div>
+    <%@include file="../common/header.jsp"%>
 
     <section id="App">
         <div class="weui-cells__title">个人资料</div>
         <div class="weui-cells">
             <a class="weui-cell weui-cell_access" href="javascript:;">
                 <div class="weui-cell__bd">
-                    <p><img class="portrait" src="image/test/p1.png"></p>
+                    <p><img class="portrait" src="image/test/p1.jpg"></p>
                 </div>
                 <div class="weui-cell__ft">修改</div>
             </a>
@@ -45,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="weui-cell__bd">联系QQ</div>
                 <div class="weui-cell__ft">未设置</div>
             </a>
-            <a class="weui-cell weui-cell_access" href="javascript:;">
+            <a class="weui-cell weui-cell_access" href="page/user/address.jsp">
                 <div class="weui-cell__bd">收货地址</div>
                 <div class="weui-cell__ft">未设置</div>
             </a>
@@ -83,6 +74,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
 $(function(){
+    headerVue.title = '个人资料';
+
     new Vue({
         el: '#App',
         data: {

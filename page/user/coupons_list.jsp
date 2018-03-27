@@ -20,16 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </style>
 </head>
 <body> 
-    <header class="bottom-line">
-        <div class="weui-flex aic container">
-            <div class="w30 ml10" id="returnBtn">
-                <img width="30" src="image/icon/return.png" alt="">
-            </div>
-            <div class="weui-flex__item tc f16">必中券</div>
-            <div class="w30 mr10"></div>
-        </div>
-    </header>
-    <div style="height: 42px;"></div>
+    <%@include file="../common/header.jsp"%>
 
     <section id="App">
         <div class="rel bgwh bottom-line">
@@ -68,6 +59,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
 $(function(){
+    headerVue.title = '必中券';
+
     new Vue({
         el: '#App',
         data: {

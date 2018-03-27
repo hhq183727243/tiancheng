@@ -91,10 +91,11 @@ img{border:0; vertical-align: bottom;}
 /* percent width value */
 .pct10{width:10%;}
 .pct15{width:15%;}
+.pct16{width:16.6666%;}
 .pct20{width:20%;}
 .pct25{width:25%;}
 .pct30{width:30%;}
-.pct33{width:33.3%;}
+.pct33{width:33.3333%;}
 .pct40{width:40%;}
 .pct50{width:50%;}
 .pct60{width:60%;}

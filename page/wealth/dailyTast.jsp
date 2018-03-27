@@ -64,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <div class="g9">金币兑换好物</div>
                 </div>
                 <div class="weui-cell__ft">
-                    <span class="mr10 gm">+5金币</span><a class="btn finish" href="page/wealth/codexChange.jsp">已完成</a>
+                    <span class="mr10 gm">+5金币</span><a class="btn finish" href="page/wealth/codExchange.jsp">已完成</a>
                 </div>
             </div>
 

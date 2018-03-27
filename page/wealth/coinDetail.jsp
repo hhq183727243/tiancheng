@@ -30,7 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </p>
             <div class="weui-flex mt20">
                 <div class="weui-flex__item mr10">
-                    <a class="weui-btn bgm" href="page/wealth/codexChange.jsp">金币兑换</a>
+                    <a class="weui-btn bgm" href="page/wealth/codExchange.jsp">金币兑换</a>
                 </div>
                 <div class="weui-flex__item ml10">
                     <a class="weui-btn bgwh g3" href="page/wealth/getCode.jsp">赚取金币</a>

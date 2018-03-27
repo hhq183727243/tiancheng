@@ -17,16 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/link.jsp"%>
 </head>
 <body> 
-    <header class="bottom-line">
-        <div class="weui-flex aic container">
-            <div class="w30 ml10" id="returnBtn">
-                <img width="30" src="image/icon/return.png" alt="">
-            </div>
-            <div class="weui-flex__item tc f16">使用帮助</div>
-            <div class="w30 mr10"></div>
-        </div>
-    </header>
-    <div style="height: 42px;"></div>
+    <%@include file="../common/header.jsp"%>
 
     <section id="App">
         <div class="weui-cells__title">提现相关</div>
@@ -58,6 +49,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
 $(function(){
+    headerVue.title = '使用帮助';
+    
     $('.j-show-answer').click(function(){
         var title = $(this).find('.weui-cell__bd:first').text();
 

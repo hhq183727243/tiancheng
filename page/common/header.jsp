@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <header class="bottom-line" id="headerApp">
     <div class="weui-flex aic container">
-        <div class="w30 ml10" id="returnBtn">
+        <div class="w30 ml10" @click="returnBack">
             <img width="30" src="image/icon/return.png" alt="">
         </div>
         <div class="weui-flex__item tc f16">{{title}}</div>
@@ -23,6 +23,13 @@ $(function(){
 
         },
         methods: {
+            returnBack: function(){
+                if(document.referrer != ''){
+                    history.go('-1')
+                }else{
+                    location.href = 'page/index.jsp';
+                }
+            }
         }
     });
 

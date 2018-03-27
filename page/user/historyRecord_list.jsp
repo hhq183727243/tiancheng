@@ -16,21 +16,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="css/lib/swiper-3.4.2.min.css" type="text/css">
     <%@include file="../common/link.jsp"%>
     <style>
-        .weui-btn_mini{ padding: 0 10px; line-height: 1.8; }
         .weui-media-box_appmsg .weui-media-box__hd{ width: 90px;height: 90px; }
     </style>
 </head>
 <body> 
-    <header class="bottom-line">
-        <div class="weui-flex aic container">
-            <div class="w30 ml10" id="returnBtn">
-                <img width="30" src="image/icon/return.png" alt="">
-            </div>
-            <div class="weui-flex__item tc f16">我的足迹</div>
-            <div class="w30 mr10"></div>
-        </div>
-    </header>
-    <div style="height: 42px;"></div>
+    <%@include file="../common/header.jsp"%>
 
     <section id="App">
         <div class="weui-cells__title lh18">我的足迹
@@ -46,13 +36,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="weui-panel__bd">
                 <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
                     <div class="weui-media-box__hd rel">
-                        <img class="weui-media-box__thumb" src="image/test/p1.png" alt="">
+                        <img class="weui-media-box__thumb" src="image/test/p1.jpg" alt="">
                         <i v-if="management" class="icon-check weui-icon-success" :class="{checked: item.checked}"></i>
                     </div>
                     <div class="weui-media-box__bd">
                         <h4 class="weui-media-box__title">练字帖成人楷书</h4>
                         <p class="weui-media-box__desc mt5">限量30份 免费送</p>
-                        <p class="mt5 lh24 fix">
+                        <p class="mt5 fix">
                             <del class="gm">免￥80</del>
                             <span class="weui-btn weui-btn_mini weui-btn_plain-primary r"  @click.stop="deleteItem(item,index)">删除</span>
                         </p>
@@ -69,6 +59,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
 $(function(){
+    headerVue.title = '我的足迹';
+
     new Vue({
         el: '#App',
         data: {

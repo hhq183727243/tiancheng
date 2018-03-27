@@ -17,49 +17,55 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/link.jsp"%>
 </head>
 <body>
-    <header class="bottom-line">
-        <div class="weui-flex aic container">
-            <div class="w30 ml10" id="returnBtn">
-                <img width="30" src="image/icon/return.png" alt="">
-            </div>
-            <div class="weui-flex__item tc f16">商品列表</div>
-            <div class="w30 mr10"></div>
-        </div>
-    </header>
-    <div style="height: 42px;"></div>
+    <%@include file="../common/header.jsp"%>
+
     <section class="bgwh" id="App">
-        <div class="swiper-container" id="cateSwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" v-for="(item,index) in categoryList">
-                    <a class="category-list__item" :class="{active: categoryIndex == index}" @click="changeCategory(index)">{{item}}</a>
+        <aside class="nav-fixed" :class="{active: showAside}" :style="navFixedTop">
+            <div class="swiper-container" id="cateSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="(item,index) in categoryList">
+                        <a class="category-list__item" :class="{active: categoryIndex == index}" @click="changeCategory(index)">{{item}}</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="rel bgf5">
-            <div class="weui-flex pro-type">
-                <div class="pro-type__item" :class="{gm: currentIndex == 0}" @click="changeType(0)">猜你喜欢</div>
-                <div class="pro-type__item" :class="{gm: currentIndex == 1}" @click="changeType(1)">平台推荐</div>
-                <div class="pro-type__item" :class="{gm: currentIndex == 2}" @click="changeType(2)">高中奖率</div>
-                <div class="pro-type__item" :class="{gm: currentIndex == 3}" @click="changeType(3)">高价值</div>
+            <div class="rel bgf5">
+                <div class="weui-flex pro-type">
+                    <div class="pro-type__item" :class="{gm: currentIndex == 0}" @click="changeType(0)">全部</div>
+                    <div class="pro-type__item" :class="{gm: currentIndex == 1}" @click="changeType(1)">高价值</div>
+                    <div class="pro-type__item" :class="{gm: currentIndex == 2}" @click="changeType(2)">高中奖率</div>
+                    <div class="pro-type__item"><a href="page/product/ptkj_list.jsp">拼团开奖</a></div>
+                </div>
+                <div class="active-line" :style="styleObject"></div>
             </div>
-            <div class="active-line" :style="styleObject"></div>
-        </div>
+            <div class="rel bgwh bottom-line">
+                <div class="weui-flex pro-type">
+                    <div class="pro-type__item" :class="{gm: orderIndex == 0}" @click="changeOrder(0)">综合排序</div>
+                    <div class="pro-type__item" :class="{gm: orderIndex == 1}" @click="changeOrder(1)">
+                        <span>价格排序</span><img width="16" :src="'image/wealth/' + priceSortType + '.png'" alt="">
+                    </div>
+                    <div class="pro-type__item" :class="{gm: orderIndex == 2}" @click="changeOrder(2)">
+                        <span>剩余份数</span><img width="16" :src="'image/wealth/' + remainSortType + '.png'" alt="">
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div style="height: 112px;"></div>
 
         <div class="fix">
-            <div class="list-zt__item product__item" v-for="item in 4">
+            <div class="list-zt__item product__item" v-for="item in 8">
                 <div class="product-cover">
-                    <img :src="'image/test/p' + (item) + '.png'"/>
+                    <img :src="'image/test/p' + (item) + '.jpg'"/>
                     <div class="txt">
                         <span>44人已申请</span>
                         <span class="mt10">限免8份</span>
                     </div>
                 </div>
-                
-                <div class="weui-flex aic mt5">
-                    <div class="weui-flex__item ell">LAVER防脱育发液</div> 
-                    <p class="f12 gm">免￥12</p>
+                <p class="ell mt5">LAVER防脱育发液</p>
+                <div class="fix mt5">
+                    <span class="circle">免</span>
+                    <del class="l">￥128.00</del> 
                 </div>
-                <div class="apply-btn mt5">免费申请</div>
+                <div class="apply-btn mt5"><a href="page/product/product_detail.jsp">免费申请</a></div>
             </div>
         </div>
     </section>
@@ -72,14 +78,37 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
 $(function(){
+    headerVue.title = '试用大厅';
+
     new Vue({
         el: '#App',
         data: {
+            scrollTop: 0,
+            showAside: false,
             categoryIndex: 0,
-            categoryList: ['精选','男装','女装','包箱','运动','配饰','数码','洗护','母婴'],
-            currentIndex: 0
+            categoryList: ['精选','女装','男装','数码','配饰','日用','包箱','母婴','彩妆','美食'],
+            currentIndex: 0,
+            orderIndex: 0,//排序
+            sortType: 'dec'//排序方式
         },
         computed: {
+            navFixedTop: function(){
+                if(this.scrollTop > 112){
+                    return {
+                        top: '-70px'
+                    }
+                }else{
+                     return {
+                        top: (42 - this.scrollTop) + 'px'
+                    }
+                }
+            },
+            priceSortType: function(){
+                return this.orderIndex == 1 ? (this.sortType) : 'sort'
+            },
+            remainSortType: function(){
+                return this.orderIndex == 2 ? (this.sortType) : 'sort'
+            },
             styleObject: function(){
                 return {
                     'transform': 'translate(' + (this.currentIndex * 100) + '%,0)'
@@ -92,6 +121,14 @@ $(function(){
             },
             changeType: function(index){
                 this.currentIndex = index;
+            },
+            changeOrder: function(index){
+                if(this.orderIndex == index){
+                    this.sortType = this.sortType == 'dec' ? 'asc' : 'dec';
+                }else{
+                    this.sortType = 'dec';
+                    this.orderIndex = index;
+                }
             }
         },
         mounted: function(){
@@ -102,7 +139,19 @@ $(function(){
                     autoplay: false,
                     slidesPerView: 5
                 });
-            })
+
+                window.onscroll = function(){
+                    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    
+                    if(that.scrollTop > scrollTop && scrollTop > 112){
+                        that.showAside = true;
+                    }else{
+                        that.showAside = false;
+                    }
+
+                    that.scrollTop = scrollTop
+                }
+            });
         }
     });
 

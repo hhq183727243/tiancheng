@@ -19,17 +19,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         .weui-media-box_appmsg .weui-media-box__hd{ width: 90px;height: 90px; }
     </style>
 </head>
-<body> 
-    <header class="bottom-line">
-        <div class="weui-flex aic container">
-            <div class="w30 ml10" id="returnBtn">
-                <img width="30" src="image/icon/return.png" alt="">
-            </div>
-            <div class="weui-flex__item tc f16">我的关注</div>
-            <div class="w30 mr10"></div>
-        </div>
-    </header>
-    <div style="height: 42px;"></div>
+<body>
+    <%@include file="../common/header.jsp"%>
 
     <section id="App">
         <div class="weui-cells__title lh18">我的关注
@@ -44,27 +35,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="weui-panel__bd">
                 <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg" v-for="(item,index) in list" @click="bindChooseItme(item)">
                     <div class="weui-media-box__hd rel">
-                        <img class="weui-media-box__thumb" src="image/test/p1.png" alt="">
+                        <img class="weui-media-box__thumb" src="image/test/p1.jpg" alt="">
                         <i v-if="management" class="icon-check weui-icon-success" :class="{checked: item.checked}"></i>
                     </div>
                     <div class="weui-media-box__bd">
                         <h4 class="weui-media-box__title">练字帖成人楷书</h4>
                         <p class="weui-media-box__desc mt5">限量30份 免费送</p>
                         <p class="mt5 gm">52人已关注 | 明天09:00开抢</p>
-                        <p class="mt5 lh24 fix">
-                            <del class="gm">免￥80</del>
+                        <p class="mt5 fix">
+                            <span class="circle">免</span>
+                            <del class="g9">￥80</del>
                             <span class="weui-btn weui-btn_mini weui-btn_plain-primary r" @click.stop="deleteItem(item,index)">取消关注</span>
                         </p>
                     </div>
                 </a>
             </div>
-            <div class="weui-panel__ft">
-                <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">
-                    <div class="weui-cell__bd">查看更多</div>
-                    <span class="weui-cell__ft"></span>
-                </a>    
-            </div>
         </div>
+
+        <%@include file="../common/loading.jsp"%>
     </section>
 </body>
 <script src="js/lib/vue.js" type="text/javascript"></script>
@@ -72,6 +60,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
 $(function(){
+    headerVue.title = '我的关注';
+
     new Vue({
         el: '#App',
         data: {

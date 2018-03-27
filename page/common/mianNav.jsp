@@ -14,7 +14,7 @@
         <img src="image/icon/shiyong.png" class="weui-tabbar__icon">
         <p class="weui-tabbar__label">试用大厅</p>
     </a>
-    <a href="javascript:;" class="weui-tabbar__item">
+    <a href="page/syjz/syjz_index.jsp" class="weui-tabbar__item">
         <img src="image/icon/jindu.png" class="weui-tabbar__icon">
         <p class="weui-tabbar__label">试用进展</p>
     </a>
