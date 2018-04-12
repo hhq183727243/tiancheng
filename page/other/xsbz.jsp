@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/header.jsp"%>
 
     <section id="App">
-        <p><img width="100%" src="image/other/xinshoubizhong.png" alt=""></p>
+        <p><img width="100%" src="image/banner/xsbz.png" alt=""></p>
 
         <div class="rel bgwh bottom-line">
             <div class="weui-flex pro-type">
@@ -40,9 +40,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
 
         <div class="fix">
-            <div class="list-zt__item product__item" v-for="item in 4">
+            <div class="list-zt__item product__item" v-for="item in 8">
                 <div class="product-cover">
-                    <img :src="'image/test/p' + (item) + '.png'"/>
+                    <img :src="'image/test/p' + (item) + '.jpg'"/>
                     <div class="txt">
                         <span>新人必中</span>
                     </div>
@@ -50,7 +50,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="ell mt5">LAVER防脱育发液</div>
                 <div class="mt5">
                     <span class="circle">免</span>
-                    <del class="g9">￥12</del>
+                    <span class="price">￥128.00</span>
                 </div>
                 <div class="apply-btn mt10">免费试用</div>
             </div>

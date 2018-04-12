@@ -16,7 +16,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="css/lib/swiper-3.4.2.min.css" type="text/css">
     <%@include file="../common/link.jsp"%>
     <style>
-        
+        .cash-item{
+            margin: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -33,6 +38,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="pro-type__item" :class="{gm: currentIndex == 1}" @click="changeType(1)">已返款(20)</div>
             </div>
             <div class="active-line pct50" :style="styleObject"></div>
+        </div>
+        <div>
+            <div class="cash-item ell" v-for="item in 10">2018-3-27 22:59:20，提现<span class="gm">￥200</span>元正在处理中...</div>
         </div>
     </section>
 </body>

@@ -52,18 +52,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
         <div class="fix">
             <div class="list-zt__item product__item" v-for="item in 8">
-                <div class="product-cover">
-                    <img :src="'image/test/p' + (item) + '.jpg'"/>
-                    <div class="txt">
-                        <span>距开团仅差5人</span>
+                <div class="p-item-inner">
+                    <div class="product-cover">
+                        <img :src="'image/test/p' + (item) + '.jpg'"/>
+                        <div class="txt">
+                            <span>距开团仅差5人</span>
+                        </div>
                     </div>
+                    <p class="ell m5">LAVER防脱育发液</p>
+                    <div class="fix m5">
+                        <span class="circle">免</span>
+                        <span class="price l">￥128.00</span>
+                    </div>
+                    <div class="apply-btn"><a href="page/product/ptkj_detail.jsp">马上参团</a></div>
                 </div>
-                <p class="ell mt5">LAVER防脱育发液</p>
-                <div class="fix mt5">
-                    <span class="circle">免</span>
-                    <del class="l">￥128.00</del>
-                </div>
-                <div class="apply-btn mt5"><a href="page/product/ptkj_detail.jsp">马上参团</a></div>
             </div>
         </div>
     </section>

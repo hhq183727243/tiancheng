@@ -20,10 +20,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </style>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <div class="tc f16 title">试用进展</div>
     </header>
-    <div style="height: 42px;"></div>
+    <div style="height: 42px;"></div> -->
 
     <section id="App">
         <div class="rel bgwh">
@@ -45,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div>
             <div class="weui-panel weui-panel_access follow-up-list">
                 <div class="weui-panel__bd">
-                    <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg" v-for="(item,index) in 4">
+                    <div href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg" v-for="(item,index) in 4">
                         <div class="weui-media-box__hd rel">
                             <img class="weui-media-box__thumb" src="image/test/p1.jpg" alt="">
                         </div>
@@ -54,11 +54,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             <p class="weui-media-box__desc mt5">限量30份 免费送</p>
                             <p class="mt5 gm">52人已关注 | 明天09:00开抢</p>
                             <p class="mt5 fix">
-                                <del class="gm">免￥80</del>
-                                <span class="weui-btn weui-btn_mini weui-btn_plain-primary r">去评价</span>
+                                <span class="circle">免</span><span class="price g9">￥128.00</span>
+                                <a class="weui-btn weui-btn_mini weui-btn_plain-primary r" href="page/product/ypjrw.jsp">去评价</a>
                             </p>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -31,9 +31,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <section id="App">
         <div class="slider" id="bannerWrap">
             <ul>
-                <li><a href=""><img src="image/test/g1.jpg"></a></li>
-                <li><a href=""><img src="image/test/g1.jpg"></a></li>
-                <li><a href=""><img src="image/test/g1.jpg"></a></li>
+                <li><img src="image/test/g1.jpg"></li>
+                <li><img src="image/test/g1.jpg"></li>
+                <li><img src="image/test/g1.jpg"></li>
             </ul>
         </div>
 
@@ -104,7 +104,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <p>关注</p>
                 </a>
                 <a class="weui-flex__item wh bg50" @click="bindCodeExchange">2000金币兑换</a>
-                <a class="weui-flex__item wh bgm" href="page/product/ptkj_apply_!.jsp">参团领取</a>
+                <a class="weui-flex__item wh bgm" href="page/product/ptkj_apply_1.jsp">参团领取</a>
             </div>
         </div>
     </section>

@@ -40,11 +40,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="weui-cell__bd">收货地址</div>
                 <div class="weui-cell__ft">未设置</div>
             </a>
-            <a class="weui-cell weui-cell_access" href="javascript:;">
+            <a class="weui-cell weui-cell_access" href="page/other/taoqizhi.jsp">
                 <div class="weui-cell__bd">我的淘气值</div>
                 <div class="weui-cell__ft">未设置</div>
             </a>
-            <a class="weui-cell weui-cell_access" href="javascript:;">
+            <a class="weui-cell weui-cell_access" href="page/user/coupons_list.jsp">
                 <div class="weui-cell__bd">我的必中券</div>
                 <div class="weui-cell__ft"></div>
             </a>
@@ -58,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </a>
             <a class="weui-cell weui-cell_access" href="javascript:;" @click="showLayer('密码')">
                 <div class="weui-cell__bd">密码</div>
-                <div class="weui-cell__ft">为设置</div>
+                <div class="weui-cell__ft">未设置</div>
             </a>
         </div>
 

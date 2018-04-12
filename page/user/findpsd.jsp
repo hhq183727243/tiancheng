@@ -39,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
             <div class="field__item">
                 <i class="icon-user"></i> 
-                <input type="password" placeholder="密码 (6-18位字符)">
+                <input type="password" placeholder="新密码 (6-18位字符)">
             </div>
 
             <button id="loginBtn" class="weui-btn bgm mt30" type="button">确认</button>

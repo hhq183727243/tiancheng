@@ -19,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
     <%@include file="../common/header.jsp"%>
 
-    <section class="bgwh" id="App">
+    <section class="bgf5" id="App">
         <aside class="nav-fixed" :class="{active: showAside}" :style="navFixedTop">
             <div class="swiper-container" id="cateSwiper">
                 <div class="swiper-wrapper">
@@ -52,20 +52,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div style="height: 112px;"></div>
 
         <div class="fix">
-            <div class="list-zt__item product__item" v-for="item in 8">
-                <div class="product-cover">
-                    <img :src="'image/test/p' + (item) + '.jpg'"/>
-                    <div class="txt">
-                        <span>44人已申请</span>
-                        <span class="mt10">限免8份</span>
+            <div class="list-zt__item product__item" v-for="(item,index) in 8">
+                <div class="p-item-inner">
+                    <a class="product-cover" href="page/product/product_detail.jsp">
+                        <img :src="'image/test/p' + (item) + '.jpg'"/>
+                        <div class="txt">
+                            <span>44人已申请 | 试用8份</span>
+                        </div>
+                    </a>
+                    <p class="ell m5">LAVER防脱育发液</p>
+                    <div class="fix m5">
+                        <span class="circle">免</span>
+                        <span class="price l">￥128.00</span> 
                     </div>
+                    <a class="apply-btn" v-if="index != 1 && index !=2" href="page/product/sysq.jsp">免费申请</a>
+                    <a class="apply-btn" v-if="index == 1" href="page/product/ptkj_apply_1.jsp">免费申请</a>
+                    <a class="apply-btn" v-if="index == 2" href="page/product/ptkj_apply_2.jsp">免费申请</a>
                 </div>
-                <p class="ell mt5">LAVER防脱育发液</p>
-                <div class="fix mt5">
-                    <span class="circle">免</span>
-                    <del class="l">￥128.00</del> 
-                </div>
-                <div class="apply-btn mt5"><a href="page/product/product_detail.jsp">免费申请</a></div>
             </div>
         </div>
     </section>
@@ -95,11 +98,11 @@ $(function(){
             navFixedTop: function(){
                 if(this.scrollTop > 112){
                     return {
-                        top: '-70px'
+                        top: '-112px'
                     }
                 }else{
                      return {
-                        top: (42 - this.scrollTop) + 'px'
+                        top: (0 - this.scrollTop) + 'px'
                     }
                 }
             },

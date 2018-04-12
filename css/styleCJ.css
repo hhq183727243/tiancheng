@@ -1,0 +1,95 @@
+body{
+    background-image: url(../image/other/lott_bg.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #ffca06;
+}
+.shanDeng,.shanDeng2{
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.shanDeng{
+	background-image: url(../image/img/shandeng1.png);
+}
+.shanDeng2{
+	background-image: url(../image/img/shandeng2.png);
+}
+
+#btn .cjBtnDom,
+#btn .cjBtn,
+.shanDeng .active,
+.shanDeng td{
+	width: 20%;
+	height: 2.35rem;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.shanDeng td.luck-unit img{
+	width: 100%;
+	height: 100%;
+}
+
+.cj-btn{
+    position: relative;
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    background-color: #ec0019;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    display: inline-block;
+    padding: 4px;
+    border-radius: 50%;
+    box-shadow: 0px 9px 0px rgb(189, 0, 20), 0px 10px 20px rgb(7, 2, 0);
+    width: 55px;
+    height: 55px;
+    line-height: 30px;
+    text-align: center;
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+}
+.cj-btn:active {
+    box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+    top: 3px;
+}
+
+.luck{
+	margin: 20px auto;
+	width: 90%;
+	background-color: #d80017;
+	border: 10px solid rgba(254, 66, 54, 0.35);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+.luck table{ margin: 0 auto; }
+.luck td.luck-unit{
+	text-align: center;
+	background-image: url(../image/img/proBj.png);
+}
+.luck td.luck-unit.active{
+	background-image: url(../image/img/active.png);
+}
+
+.zhizhen{width: 30%;height: auto;position: absolute;top:25vw;left: 35vw;}
+.cishu-text{color: #d32833;text-align: center;position: absolute;top: 17vw;left: 7vw;font-size: 4vw;font-weight: bold;}
+.jl{width: 90%;height: 12vw;line-height: 12vw;margin:0 auto;border-radius: 2vw;color: #b9925b;font-size: 4vw;
+	background:-moz-linear-gradient(top,#fff8eb,#fee9c5);
+	background:-webkit-gradient(linear,0 50%,100% 50%,from(#fff8eb),to(#fee9c5));
+	background:-webkit-linear-gradient(top,#fff8eb,#fee9c5);
+	background:-o-linear-gradient(top,#fff8eb,#fee9c5);
+}
+.jl>p>span{color: #d32833;}
+.jl>p{text-align: center;}
+.gdbox{width: 90%;height: auto;margin: 0 auto;
+		background:-moz-linear-gradient(top,#fff3de,#fae6c2);
+		background:-webkit-gradient(linear,0 50%,100% 50%,from(#fff3de),to(#fae6c2));
+		background:-webkit-linear-gradient(top,#fff3de,#fae6c2);
+		background:-o-linear-gradient(top,#fff3de,#fae6c2);
+}
+.gdbox>strong{ display: block;color: #303030; padding-top: 10px; text-align: center;}
+.gdbox .tit{padding: 8px 0; background: #b9925b; color: #fff; margin-bottom: 5px;}

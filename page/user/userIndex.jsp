@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <a class="l" href="page/user/userInfo.jsp"><img width="22" src="image/icon/set.png" alt=""> 设置</a>
                 <a class="r"><img width="22" src="image/icon/kefu.png" alt=""> 咨询甜橙</a>
             </div>
-            <div class="weui-flex mt10 aic">
+            <div class="weui-flex mt20 aic">
                 <div><img class="portrait" src="image/test/p1.jpg"/></div>
                 <div class="ml20 f16">刘德华</div>
                 <div class="weui-flex__item tr lh22">
@@ -47,29 +47,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
 
         <div class="weui-cells">
-            <a class="weui-cell weui-cell_access" href="page/user/dingdan.jsp">
+            <a class="weui-cell weui-cell_access" href="page/syjz/syjz_index.jsp">
                 <div class="weui-cell__hd"><img src="image/icon/order.png" alt=""></div>
                 <div class="weui-cell__bd">我的订单</div>
                 <div class="weui-cell__ft">查看全部订单</div>
             </a>
             <div class="weui-flex pt10 pb10 tc top-line">
-                <a class="weui-flex__item">
+                <a class="weui-flex__item" href="page/syjz/syjz_index.jsp">
                     <p><img height="24" src="image/icon/kaijiang.png" alt=""></p>
                     <p class="mt5">待开奖</p>
                 </a>
-                <a class="weui-flex__item">
+                <a class="weui-flex__item" href="page/syjz/syjz_index.jsp">
                     <p><img height="24" src="image/icon/liwu.png" alt=""></p>
                     <p class="mt5">待领奖</p>
                 </a>
-                <a class="weui-flex__item">
+                <a class="weui-flex__item" href="page/syjz/syjz_index.jsp">
                     <p><img height="24" src="image/icon/pingjia.png" alt=""></p>
                     <p class="mt5">待评价</p>
                 </a>
-                <a class="weui-flex__item">
+                <a class="weui-flex__item" href="page/syjz/syjz_index.jsp">
                     <p><img height="24" src="image/icon/wancheng.png" alt=""></p>
                     <p class="mt5">已完成</p>
                 </a>
-                <a class="weui-flex__item">
+                <a class="weui-flex__item" href="page/syjz/syjz_index.jsp">
                     <p><img height="24" src="image/icon/zhuiping.png" alt=""></p>
                     <p class="mt5">追评任务</p>
                 </a>
@@ -92,6 +92,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="weui-cell__bd">我的必中券</div>
                 <div class="weui-cell__ft"></div>
             </a>
+        </div>
+
+        <div class="weui-cells">
             <a class="weui-cell weui-cell_access" href="page/invitation/invitation_index.jsp">
                 <div class="weui-cell__hd"><img src="image/icon/fankui.png" alt=""></div>
                 <div class="weui-cell__bd">好友邀请</div>

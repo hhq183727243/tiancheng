@@ -23,10 +23,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/header.jsp"%>
 
     <section id="App">
-        <div class="weui-cells__title lh18">我的足迹
-            <span class="gm r" @click="bindManagement" v-show="!management"><img width="18" src="image/icon/set_hover.png"> 管理</span>
+        <div class="weui-cells__title lh18 tr">
+            <span class="gm" @click="bindManagement" v-show="!management"><img width="18" src="image/icon/set_hover.png"> 管理</span>
             
-            <span class="gm r" v-show="management">
+            <span class="gm" v-show="management">
                 <span @click="bindCancelMore" >批量删除记录</span>
                 <span class="ml10" @click="management = false">完成</span>
             </span>
@@ -34,20 +34,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="weui-panel weui-panel_access follow-up-list" v-for="(item,index) in list" @click="bindChooseItme(item)">
             <div class="weui-panel__hd">2018-3-17</div>
             <div class="weui-panel__bd">
-                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
-                    <div class="weui-media-box__hd rel">
+                <div class="weui-media-box weui-media-box_appmsg">
+                    <a class="weui-media-box__hd rel" href="page/product/product_detail.jsp">
                         <img class="weui-media-box__thumb" src="image/test/p1.jpg" alt="">
                         <i v-if="management" class="icon-check weui-icon-success" :class="{checked: item.checked}"></i>
-                    </div>
+                    </a>
                     <div class="weui-media-box__bd">
                         <h4 class="weui-media-box__title">练字帖成人楷书</h4>
                         <p class="weui-media-box__desc mt5">限量30份 免费送</p>
                         <p class="mt5 fix">
-                            <del class="gm">免￥80</del>
-                            <span class="weui-btn weui-btn_mini weui-btn_plain-primary r"  @click.stop="deleteItem(item,index)">删除</span>
+                            <span class="circle">免</span><span class="price g9">￥128.00</span>
+                            <span class="weui-btn weui-btn_mini weui-btn_plain-primary r"  @click.prevent="deleteItem(item,index)">删除</span>
                         </p>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
 

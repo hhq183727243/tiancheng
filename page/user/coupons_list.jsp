@@ -45,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="ml15">
                     <a class="gm" v-if="currentIndex == 0">去使用</a>
                     <span class="usered" v-if="currentIndex == 1">已使用</span>
-                    <span class="usered" v-if="currentIndex == 2"><del>已过期</del></span>
+                    <span class="usered" v-if="currentIndex == 2"><del class="price">已过期</del></span>
                 </div>
             </div>
         </div>

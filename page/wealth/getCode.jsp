@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/header.jsp"%>
 
     <section id="App">
-        <p><img width="100%" src="image/wealth/get-coin-bg.png" alt=""></p>
+        <p><img width="100%" src="image/banner/get-coin-bg.png" alt=""></p>
 
         <div class="weui-cells">
             <a class="weui-cell weui-cell_access" href="page/wealth/newTask.jsp">

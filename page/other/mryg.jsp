@@ -19,11 +19,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <style>
     	.weui-media-box_appmsg .weui-media-box__hd{ width: 90px;height: 90px; }
         .btn-remind{
+            z-index: 9;
+            position: absolute;
+            bottom: 12px;
+            right: 15px;
+        }
+        .btn-remind .weui-btn{
             background-color: #ffc300;
             border:1px solid #ffc300;
         }
-        .btn-remind:after{ content: none; }
-        .btn-remind.active{
+        .btn-remind .weui-btn:after{ content: none; }
+        .btn-remind .weui-btn.active{
             background-color: #fff;
             color: #ffc300;
             border:1px solid #ffc300;
@@ -34,26 +40,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/header.jsp"%>
 
     <section id="App">
-        <p><img width="100%" src="image/other/bizhong.png" alt=""></p>
+        <p><img width="100%" src="image/banner/mrsx.png" alt=""></p>
         <p class="lh32 pl15 bgwh bottom-line">请务必关注甜橙试用，将于开奖前5分钟提醒</p>
 
         <div class="weui-panel weui-panel_access">
             <div class="weui-panel__bd">
-                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg" v-for="(item,index) in list">
-                    <div class="weui-media-box__hd rel">
-                        <img class="weui-media-box__thumb" src="image/test/p1.jpg" alt="">
+                <div class="rel" v-for="(item,index) in list">
+                    <div class="btn-remind">   
+                        <span class="weui-btn weui-btn_mini r" :class="{active: item.remind}" @click="bindUpdateStatus(item,index)">{{item.remind ? '取消提醒' : '设置提醒'}}</span>
                     </div>
-                    <div class="weui-media-box__bd g9">
-                        <h4 class="weui-media-box__title g3">练字帖成人楷书</h4>
-                        <p class="weui-media-box__desc mt5">限量30份 免费送</p>
-                        <p class="mt5 gm">52人已关注 | 明天09:00开抢</p>
-                        <p class="mt5 fix">
-                            <span class="circle">免</span>
-                            <del class="g9">￥80</del>
-                            <span class="weui-btn weui-btn_mini btn-remind r" :class="{active: item.remind}" @click="bindUpdateStatus(item,index)">{{item.remind ? '取消提醒' : '设置提醒'}}</span>
-                        </p>
-                    </div>
-                </a>
+                    <a class="weui-media-box weui-media-box_appmsg" href="page/other/mryg_detail.jsp">
+                        <div class="weui-media-box__hd rel">
+                            <img class="weui-media-box__thumb" src="image/test/p1.jpg" alt="">
+                        </div>
+                        <div class="weui-media-box__bd g9">
+                            <h4 class="weui-media-box__title g3">练字帖成人楷书</h4>
+                            <p class="weui-media-box__desc mt5">限量30份 免费送</p>
+                            <p class="mt5 gm">52人已关注 | 明天09:00开抢</p>
+                            <p class="mt5 fix">
+                                <span class="circle">免</span>
+                                <span class="price">￥128.00</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
 

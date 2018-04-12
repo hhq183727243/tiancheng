@@ -31,7 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <h4>每日挑战</h4>
                     <div class="g9">明早准时打卡可瓜分金额</div>
                 </div>
-                <div class="weui-cell__ft"><a class="btn">去完成</a></div>
+                <div class="weui-cell__ft"><a class="btn" href="page/challenge/challenge_index.jsp">去完成</a></div>
             </div>
             
             <div class="weui-cell">
@@ -74,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <h4>幸运大转盘</h4>
                     <div class="g9">参与幸运大转盘, 金币翻10倍</div>
                 </div>
-                <div class="weui-cell__ft"><a class="btn">去完成</a></div>
+                <div class="weui-cell__ft"><a class="btn" href="page/other/dzp.jsp">去完成</a></div>
             </div>
         </div>
     </section>

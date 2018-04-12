@@ -31,24 +31,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <section id="App">
         <div class="slider" id="bannerWrap">
             <ul>
-                <li><a href=""><img src="image/test/g1.jpg"></a></li>
-                <li><a href=""><img src="image/test/g1.jpg"></a></li>
-                <li><a href=""><img src="image/test/g1.jpg"></a></li>
+                <li><img src="image/test/g1.jpg"></li>
+                <li><img src="image/test/g1.jpg"></li>
+                <li><img src="image/test/g1.jpg"></li>
             </ul>
         </div>
 
         <div class="good-info bottom-line">
-            <h4>凉鞋女夏高跟凉鞋</h4>
+            <div class="weui-flex">
+                <h4 class="weui-flex__item ell">凉鞋女夏高跟凉鞋凉鞋女夏高跟凉鞋夏高跟凉鞋</h4>
+                <div>
+                    <span class="circle">免</span>
+                    <span class="f14 gm">￥88.00</span>
+                </div>
+            </div>
             <p class="mt10">
-                <span>活动份数:限免5份</span>
-                <span class="ml10">金币兑换:限免5份</span>
+                <span>活动份数:试用5份</span>
+                <span class="ml10">金币兑换:试用5份</span>
                 <span class="r">25人申请</span>
             </p>
-        </div>
-        <div class="good-info bottom-line">
-            <span class="circle">免</span>
-            <span class="f16 gm">￥88.00</span>
-            <span class="baoyou ml10">包邮</span>
         </div>
 
         <div class="good-info bottom-line weui-flex">

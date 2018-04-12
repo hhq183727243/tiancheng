@@ -68,7 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
 $(function(){
-    headerVue.title = '搬到淘宝账号';
+    headerVue.title = '绑定淘宝账号';
 
     new Vue({
         el: '#App',

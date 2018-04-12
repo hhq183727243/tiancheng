@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
             <p class="fix mt20">
                 <a class="l gm" href="page/user/register.jsp">立即注册</a>
-                <a class="r g9" href="page/user/register.jsp">忘记密码</a>
+                <a class="r g9" href="page/user/findpsd.jsp">忘记密码</a>
             </p>
 
             <button id="loginBtn" class="weui-btn bgm mt30" type="button">登录</button>

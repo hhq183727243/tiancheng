@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <h4 class="weui-media-box__title">练字帖成人楷书</h4>
                         <p class="weui-media-box__desc mt5">限量30份 免费送</p>
                         <p class="mt5 fix">
-                            <del class="gm">免￥80</del>
+                            <span class="price">￥128.00</span>
                             <span class="weui-btn weui-btn_mini weui-btn_plain-primary r">去评价</span>
                         </p>
                     </div>

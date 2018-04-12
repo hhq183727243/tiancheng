@@ -1,4 +1,3 @@
-
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
@@ -35,10 +34,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <div class="weui-media-box__bd g9">
                         <h4 class="weui-media-box__title g3">练字帖成人楷书</h4>
                         <p class="mt5">限量30份 免费送</p>
-                        <p class="mt5">限免<span class="gm">10</span>份<span class="r">共189人参与</span></p>
+                        <p class="mt5">试用<span class="gm">10</span>份<span class="r">共189人参与</span></p>
                         <p class="mt5 fix">
                             <span class="circle">免</span>
-                            <del class="gm">￥80</del>
+                            <span class="price g9">￥128.00</span>
                             <span class="weui-btn weui-btn_mini weui-btn_plain-primary r" @click.stop="bindToSnapUp(item,index)">马上抢</span>
                         </p>
                     </div>

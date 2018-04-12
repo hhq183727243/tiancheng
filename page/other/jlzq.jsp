@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/header.jsp"%>
 
     <section id="App">
-        <p><img width="100%" src="image/other/bizhong.png" alt=""></p>
+        <p><img width="100%" src="image/banner/jlzq.png" alt=""></p>
         <p class="lh32 pl15 bgwh bottom-line">捡漏专区：每天21点开始捡漏，抢到百分百中奖</p>
 
         <div class="weui-panel weui-panel_access follow-up-list">
@@ -40,7 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             <img width="16" src="image/icon/star.png" v-for="item in 5"></p>
                         <p class="mt5 fix">
                             <span class="circle">免</span>
-                            <del class="g9">￥80</del>
+                            <span class="price">￥128.00</span>
                             <span class="weui-btn weui-btn_mini weui-btn_plain-primary r" @click.stop="bindToSnapUp(item,index)">马上抢</span>
                         </p>
                     </div>

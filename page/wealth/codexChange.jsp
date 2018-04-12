@@ -17,7 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/link.jsp"%>
     <style>
         .nav-fixed{
-            top: -33px;
+            top: -75px;
         }
     </style>
 </head>
@@ -25,14 +25,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/header.jsp"%>
 
     <section id="App">
-        <ul class="p10">
-            <li>• 金币兑换为必中资格，兑换后需在6小时内领取，超时自动放弃</li> 
-            <li class="mt5">• 如有疑问，联系甜橙平台客服。</li>
-        </ul>
         <p><img width="100%" src="image/wealth/luck-bg.png" alt=""></p>
-        
+        <ul class="p10 bgwh bottom-line">
+            <li>金币兑换为必中资格，兑换后需在6小时内领取，超时自动放弃</li> 
+            <li class="mt5">如有疑问，联系甜橙平台客服。</li>
+        </ul>
+
         <aside :class="{active: showAside,'nav-fixed': isFixed}" >
-            <div class="swiper-container" id="cateSwiper">
+            <div class="swiper-container bgf5" id="cateSwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" v-for="(item,index) in categoryList">
                         <a class="category-list__item" :class="{active: categoryIndex == index}" @click="changeCategory(index)">{{item}}</a>
@@ -57,17 +57,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
         <div class="fix">
             <div class="list-zt__item product__item" v-for="item in 8">
-                <div class="product-cover">
-                    <img :src="'image/test/p' + (item) + '.jpg'"/>
-                    <div class="txt">
-                        <span>剩余22份</span>
+                <div class="p-item-inner pb5">
+                    <div class="product-cover">
+                        <img :src="'image/test/p' + (item) + '.jpg'"/>
+                        <div class="txt">
+                            <span>剩余22份</span>
+                        </div>
                     </div>
-                </div>
-                <div class="ell mt5">LAVER防脱育发液</div>
-                <div class="mt5">
-                    <span class="circle">兑</span>
-                    <span class="gm">50金币</span>
-                    <del class="g9">免￥12</del>
+                    <div class="ell m5">LAVER防脱育发液</div>
+                    <div class="m5">
+                        <span class="circle">兑</span>
+                        <span class="gm">50金币</span>
+                        <span class="g9">免￥12</span>
+                    </div>
                 </div>
             </div>
         </div>

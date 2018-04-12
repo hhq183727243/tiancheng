@@ -29,7 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <img width="22" src="image/icon/fenlei.png"><p>分类</p></a>
             </div>
             <div class="w50 tc">
-                <a href="page/other/dzp.jsp">
+                <a href="page/dzp/dzp.jsp">
                     <img width="22" src="image/icon/zhuanpan.png"><p>大转盘</p></a>
             </div>
         </div>
@@ -39,9 +39,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <article id="App">
         <div class="slider" id="bannerWrap">
             <ul class="" id="bannerList">
-                <li><a href=""><img src="image/test/banner_1.jpg"></a></li>
-                <li><a href=""><img src="image/test/banner_2.jpg"></a></li>
-                <li><a href=""><img src="image/test/banner_3.jpg"></a></li>
+                <li><a href="javascript:void(0);"><img src="image/test/banner_1.jpg"></a></li>
+                <li><a href="javascript:void(0);"><img src="image/test/banner_2.jpg"></a></li>
+                <li><a href="javascript:void(0);"><img src="image/test/banner_3.jpg"></a></li>
             </ul>
         </div>
         
@@ -63,7 +63,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <div class="icon-text"><img width="100%" src="image/home/tab5.png"></div>
                     <div class="mt5">高价值精品</div>
                 </a>
-                <a class="weui-flex__item" href="page/challenge/challenge_index.jsp">
+                <a class="weui-flex__item" href="page/product/ptkj_list.jsp">
                     <div class="icon-text"><img width="100%" src="image/home/tab1.png"></div>
                     <div class="mt5">拼团试用</div>
                 </a>
@@ -75,26 +75,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </a>
                 <a class="weui-flex__item" href="page/challenge/challenge_index.jsp">
                     <div class="icon-text"><img width="100%" src="image/home/tab3.png"></div>
-                    <div class="mt5">早起挑战</div>
+                    <div class="mt5">每日挑战</div>
                 </a>
                 <a class="weui-flex__item" href="page/invitation/invitation_index.jsp">
                     <div class="icon-text"><img width="100%" src="image/home/tab8.png"></div>
                     <div class="mt5">邀请好友</div>
                 </a>
-                <a class="weui-flex__item" href="page/product/product_list.jsp">
+                <a class="weui-flex__item" href="page/wealth/dailyTast.jsp">
                     <div class="icon-text"><img width="100%" src="image/home/tab2.png"></div>
-                    <div class="mt5">每日试用</div>
+                    <div class="mt5">每日任务</div>
                 </a>
             </div>
 
             <div class="bottom-line p15">
-                <div class="zjgg">
-                    <div class="weui-cell_warn l">中奖公告：</div>
-                    <div class="weui-flex__item" style="height: 18px;margin-left: 60px; overflow: hidden;"> 
-                        <p class="ell ani-gd">
-                            <span class="weui-cell_warn">{{winningEntity.name}}</span>免费获得 
-                            <span class="weui-cell_warn">{{winningEntity.price}}</span>{{winningEntity.title}}
-                        </p>
+                <div class="zjgg">中奖公告</div>
+                <div style="margin-left: 70px; overflow: hidden;"> 
+                    <div class="weui-flex ani-gd">
+                        <div class="weui-flex__item">
+                            <div>
+                                <span class="weui-cell_warn">{{winningEntity.name}}</span>免费获得
+                                <span class="weui-cell_warn">{{winningEntity.price}}</span>元
+                            </div>
+                            <div class="ell mt5">{{winningEntity.title}}</div>
+                        </div>
+                        <div><img width="40" height="40px" src="image/test/p1.jpg" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -130,22 +134,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <a class="more">更多>></a>
             </div>
             <div class="list-zt fix">
-                <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
-                <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
-                <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
-                <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
-                <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
-                <div class="list-zt__item"><img src="image/test/zhuanti.jpg"></div>
+                <div class="list-zt__item" v-for="(item,index) in zhuanti">
+                    <img :src="'image/test/zt_' + index + '.jpg'">
+                    <span class="zt-txt">{{item.name}}</span>
+                </div>
             </div>
         </section>
 
-        <section class="bgwh mt10" id="proTypeApp">
+        <section class="mt10" id="proTypeApp">
             <div class="list-tit">
                 <span class="gm f16">好物推荐</span>
                 <a class="more">更多>></a>
             </div>
         
-            <div class="rel">
+            <div class="rel bgwh">
                 <div class="weui-flex pro-type">
                     <div class="pro-type__item" :class="{gm: currentIndex == 0}" @click="changeType(0)">猜你喜欢</div>
                     <div class="pro-type__item" :class="{gm: currentIndex == 1}" @click="changeType(1)">平台推荐</div>
@@ -157,14 +159,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
             <div class="fix">
                 <a class="list-zt__item product__item" href="page/product/product_detail.jsp" v-for="item in 8">
-                    <div class="product-cover"><img :src="'image/test/p' + (item) + '.jpg'"/></div>
-                    <p class="ell mt5">LAVER防脱育发液</p>
-                    <div class="fix mt5">
-                        <span class="circle">免</span>
-                        <del class="l">￥128.00</del> 
-                        <p class="r">限免<span class="gm">50</span>份</p>
+                    <div class="p-item-inner">
+                        <div class="product-cover"><img :src="'image/test/p' + (item) + '.jpg'"/></div>
+                        <p class="ell m5">LAVER防脱育发液</p>
+                        <div class="fix m5">
+                            <span class="circle">免</span>
+                            <span class="price l">￥128.00</span> 
+                            <p class="r">试用<span class="gm">50</span>份</p>
+                        </div>
+                        <div class="apply-btn">免费申请</div>
                     </div>
-                    <div class="apply-btn mt5">免费申请</div>
                 </a>
             </div>
         </section>
@@ -182,13 +186,15 @@ $(function(){
     new Vue({
         el: '#App',
         data: {
+            zhuanti: [{name: '女装'},{name: '男装'},{name: '数码'},
+                {name: '配饰'},{name: '包箱'},{name: '母婴'}],
             currentIndex: 0,
             winningIndex: 0,
             winningEntity: {},
             winningList: [
-                {name: 'c***1',price: '15.00',title: '元纪梵希正品丝袜'},
-                {name: 'c***2',price: '66.00',title: '元美容院专用玫瑰软膜粉'},
-                {name: 'c***3',price: '77.00',title: '元牛奶珍珠面膜粉补水'}
+                {name: 'c***1',price: '15.00',title: '纪梵希正品丝袜'},
+                {name: 'c***2',price: '66.00',title: '美容院专用玫瑰软膜粉'},
+                {name: 'c***3',price: '77.00',title: '牛奶珍珠面膜粉补水'}
             ]//中奖名单
         },
         computed: {

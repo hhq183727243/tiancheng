@@ -37,7 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
         <div class="weui-cells__title">金币明细</div>
         <div class="weui-cells weui-cell_access">
-            <a class="weui-cell">
+            <a class="weui-cell" href="page/wealth/txjl_list.jsp">
                 <div class="weui-cell__bd">提现记录</div>
                 <div class="weui-cell__ft"></div>
             </a>
