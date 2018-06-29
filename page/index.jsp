@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <base href="<%=basePath%>" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>hello world</title>
+    <title>甜橙试用</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -17,24 +17,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="common/link.jsp"%>
 </head>
 <body>
-    <header>
+    <header class="home-header">
         <div class="weui-flex aic" id="searchBar">
-            <div class="w50 tc"><img width="36" src="image/logo.jpg"></div>
+            <div class="pl15 pr15 tc">甜橙</br>试用</div>
             <div class="weui-flex__item search-box">
                 <i class="weui-icon-search"></i>
                 <input type="search" id="searchInput" placeholder="搜索商品"/>
             </div>
-            <div class="w50 tc">
+            <div class="pl15 pr15 tc">
                 <a href="page/product/product_list.jsp">
-                    <img width="22" src="image/icon/fenlei.png"><p>分类</p></a>
+                    <img style="opacity: 0.85" src="image/icon/fenlei.png">
+                    <p>分类</p>
+                </a>
             </div>
-            <div class="w50 tc">
+            <!-- <div class="ml10 mr5 tc">
                 <a href="page/dzp/dzp.jsp">
-                    <img width="22" src="image/icon/zhuanpan.png"><p>大转盘</p></a>
-            </div>
+                    <img style="opacity: 0.85" src="image/icon/zhuanpan.png">
+                    <p class="mt5">大转盘</p></a>
+            </div> -->
         </div>
     </header>
-    <div style="height: 50px"></div>
+    <div style="height: 1.7rem"></div>
     
     <article id="App">
         <div class="slider" id="bannerWrap">
@@ -227,7 +230,7 @@ $(function(){
         mounted: function(){
             this.$nextTick(function () {
                 //初始化banner动画
-                $('#bannerWrap').mobileSlider({width:640,scale: 2});
+                $('#bannerWrap').mobileSlider({width:640,scale: 2.5});
                 this.winningMarquee();
             })
         }

@@ -16,32 +16,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="css/lib/swiper-3.4.2.min.css" type="text/css">
     <%@include file="../common/link.jsp"%>
     <style>
-        .weui-cell__hd img{ width: 1.7rem;height: 1.7rem; }
+        
     </style>
 </head>
 <body>
     <%@include file="../common/header.jsp"%>
 
     <section id="App">
-        <p><img width="100%" src="image/banner/get-coin-bg.png" alt=""></p>
-
-        <div class="weui-cells">
-            <a class="weui-cell weui-cell_access" href="page/wealth/newTask.jsp">
-                <div class="weui-cell__hd"><img src="image/wealth/xinshou.png" alt=""></div>
-                <div class="weui-cell__bd">
-                    <h4>新手任务</h4>
-                    <p class="g9">完成任务, 增加中奖率, 还能获得金币哟</p>
-                </div>
-                <div class="weui-cell__ft"></div>
-            </a>
-            <a class="weui-cell weui-cell_access" href="page/wealth/dailyTast.jsp">
-                <div class="weui-cell__hd"><img src="image/wealth/meiri.png" alt=""></div>
-                <div class="weui-cell__bd">
-                    <h4>每日任务</h4>
-                    <p class="g9">完成所有任务, 获得最高中奖率哦</p>
-                </div>
-                <div class="weui-cell__ft"></div>
-            </a>
+        <div class="weui-msg">
+            <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+            <div class="weui-msg__text-area">
+                <h2 class="weui-msg__title">兑换申请已提交</h2>
+                <p class="weui-msg__desc">预计2018-4-16 09:27:02前到账</p>
+            </div>
+            <div class="weui-msg__opr-area">
+                <p class="weui-btn-area">
+                    <a href="page/index.jsp" class="weui-btn bgm">知道了</a>
+                    <a href="page/wealth/txjl_list.jsp" class="weui-btn weui-btn_default">查看兑换记录</a>
+                </p>
+            </div>
         </div>
     </section>
 </body>
@@ -50,12 +43,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
 $(function(){
-    headerVue.title = '金币赚取';
+    headerVue.title = '兑换';
 
     new Vue({
         el: '#App',
         data: {
 
+        },
+        computed: {
+
+        },
+        methods: {
         }
     });
 

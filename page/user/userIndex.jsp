@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <base href="<%=basePath%>" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>hello world</title>
+    <title>甜橙试用</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -18,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body>
     <section id="App">
-        <div class="user-top wh">
+        <div class="user-top">
             <div class="fix lh22">
                 <a class="l" href="page/user/userInfo.jsp"><img width="22" src="image/icon/set.png" alt=""> 设置</a>
                 <a class="r"><img width="22" src="image/icon/kefu.png" alt=""> 咨询甜橙</a>
@@ -38,7 +38,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </a>
             <a class="weui-flex__item bre" href="page/wealth/cashshow.jsp">
                 <p>0.00</p>
-                <p class="mt5">可提现余额</p>
+                <p class="mt5">可兑换余额</p>
             </a>
             <a class="weui-flex__item" href="page/wealth/cashback.jsp">
                 <p>0.00</p>

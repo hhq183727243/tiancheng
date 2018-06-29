@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <base href="<%=basePath%>" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>hello world</title>
+    <title>甜橙试用</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -25,7 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/header.jsp"%>
 
     <section id="App">
-        <p><img width="100%" src="image/wealth/luck-bg.png" alt=""></p>
+        <p><img width="100%" src="image/banner/jbdh.png" alt=""></p>
         <ul class="p10 bgwh bottom-line">
             <li>金币兑换为必中资格，兑换后需在6小时内领取，超时自动放弃</li> 
             <li class="mt5">如有疑问，联系甜橙平台客服。</li>

@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <base href="<%=basePath%>" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>hello world</title>
+    <title>甜橙试用</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -95,11 +95,11 @@ $(function(){
             navFixedTop: function(){
                 if(this.scrollTop > 112){
                     return {
-                        top: '-70px'
+                        top: '-112px'
                     }
                 }else{
                      return {
-                        top: (42 - this.scrollTop) + 'px'
+                        top: (0 - this.scrollTop) + 'px'
                     }
                 }
             },

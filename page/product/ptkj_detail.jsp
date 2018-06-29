@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <base href="<%=basePath%>" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>hello world</title>
+    <title>甜橙试用</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -95,11 +95,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div style="height: 47px"></div>
         <div class="fixed-buttom">
             <div class="weui-flex aic rel bgf5">
-                <a class="btn-sm w70" href="page/index.jsp">
+                <a class="btn-sm w50" href="page/index.jsp">
                     <img src="image/icon/home.png">
                     <p>首页</p>
                 </a>
-                <a class="btn-sm w70">
+                <a class="btn-sm w50">
                     <img src="image/icon/follow.png">
                     <p>关注</p>
                 </a>

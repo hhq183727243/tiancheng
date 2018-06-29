@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <base href="<%=basePath%>" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>hello world</title>
+    <title>甜橙试用</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -33,7 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </div>
                 <div class="weui-cell__ft"><a class="btn" href="page/challenge/challenge_index.jsp">去完成</a></div>
             </div>
-            
+
             <div class="weui-cell">
                 <div class="weui-cell__hd"><img src="image/wealth/shenqing.png" alt=""></div>
                 <div class="weui-cell__bd">
@@ -47,14 +47,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </div>
                 </div>
                 <div class="weui-cell__ft"><a class="btn" href="page/index.jsp">去完成</a></div>
-            </div>
-            <div class="weui-cell">
-                <div class="weui-cell__hd"><img src="image/wealth/yaoqing.png" alt=""></div>
-                <div class="weui-cell__bd">
-                    <h4>邀请好友</h4>
-                    <div class="g9">邀请好友成功注册</div>
-                </div>
-                <div class="weui-cell__ft"><a class="btn" href="page/invitation/invitation_index.jsp">去完成</a></div>
             </div>
 
             <div class="weui-cell">
@@ -74,7 +66,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <h4>幸运大转盘</h4>
                     <div class="g9">参与幸运大转盘, 金币翻10倍</div>
                 </div>
-                <div class="weui-cell__ft"><a class="btn" href="page/other/dzp.jsp">去完成</a></div>
+                <div class="weui-cell__ft"><a class="btn" href="page/dzp/dzp.jsp">去完成</a></div>
+            </div>
+            
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><img src="image/wealth/yaoqing.png" alt=""></div>
+                <div class="weui-cell__bd">
+                    <h4>邀请好友</h4>
+                    <div class="g9">邀请好友成功注册</div>
+                </div>
+                <div class="weui-cell__ft"><a class="btn" href="page/invitation/invitation_index.jsp">去完成</a></div>
             </div>
         </div>
     </section>

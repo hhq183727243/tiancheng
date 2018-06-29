@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <base href="<%=basePath%>" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>hello world</title>
+    <title>甜橙试用</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/header.jsp"%>
 
     <section id="App">
-        <div class="weui-cells__title">提现相关</div>
+        <div class="weui-cells__title">兑换相关</div>
         <div class="weui-cells">
             <a class="weui-cell weui-cell_access j-show-answer" href="javascript:;">
                 <div class="weui-cell__bd">只要申请就一定会中奖吗</div>

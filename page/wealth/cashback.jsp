@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <base href="<%=basePath%>" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>hello world</title>
+    <title>甜橙试用</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -29,7 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
     <section id="App">
         <ul class="p10">
-            <li>• 为了保障试客和商家交易金额的准确性，平台预留3天的资金核查周期，资金被确认后方可提现。</li> 
+            <li>• 为了保障试客和商家交易金额的准确性，平台预留3天的资金核查周期，资金被确认后方可兑换。</li> 
             <li class="mt5">• 每天不定时上新，每人每天仅能兑换一件商品</li>
         </ul>
         <div class="rel bgwh">
@@ -40,7 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="active-line pct50" :style="styleObject"></div>
         </div>
         <div>
-            <div class="cash-item ell" v-for="item in 10">2018-3-27 22:59:20，提现<span class="gm">￥200</span>元正在处理中...</div>
+            <div class="cash-item ell" v-for="item in 10">2018-3-27 22:59:20，兑换<span class="gm">￥200</span>元正在处理中...</div>
         </div>
     </section>
 </body>

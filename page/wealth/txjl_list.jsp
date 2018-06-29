@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <base href="<%=basePath%>" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>hello world</title>
+    <title>甜橙试用</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="p10 bgf5 mt10">   
                 <div class="weui-flex mt5" v-for='item in 5'>
                     <span class="weui-flex__item">刘**</span>
-                    <span class="weui-flex__item tc">提现成功</span>
+                    <span class="weui-flex__item tc">兑换成功</span>
                     <span class="weui-flex__item tr gm">80.00元</span>
                 </div>
             </div>
@@ -39,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
 $(function(){
-    headerVue.title = '提现记录';
+    headerVue.title = '兑换记录';
 
     new Vue({
         el: '#App',

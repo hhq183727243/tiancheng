@@ -23,37 +23,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="../common/header.jsp"%>
 
     <section id="App">
-        <div class="coin-bg">
-            <p class="codes">
-                <img class="vt mr5" height="28" src="image/icon/coin.png">
-                <span class="gm f24">100</span>
-            </p>
-            <div class="weui-flex mt20">
-                <div class="weui-flex__item mr10">
-                    <a class="weui-btn bgm" href="page/wealth/codExchange.jsp">金币兑换</a>
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">兑换金额</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入兑换金额">
                 </div>
-                <div class="weui-flex__item ml10">
-                    <a class="weui-btn bgwh g3" href="page/wealth/getCode.jsp">赚取金币</a>
+            </div>
+            <div class="weui-cell weui-cell_select weui-cell_select-after">
+                <div class="weui-cell__hd">
+                    <label for="" class="weui-label">银行</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <select class="weui-select" name="select1">
+                        <option value="2">工商银行</option>
+                        <option value="3">农业银行</option>
+                        <option value="4">建设银行</option>
+                        <option value="5">中国银行</option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">银行账户</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入银行账户">
                 </div>
             </div>
         </div>
 
-        <div class="weui-cells__title">金币明细</div>
-        <div class="weui-cells">
-            <div class="weui-cell">
-                <div class="weui-cell__bd">
-                    <p>添加地址赠送金币</p>
-                    <p class="g9 mt5">2018-3-17 18:13:12</p>
-                </div>
-                <div class="weui-cell__ft"><span class="gm f16">+ 5</span></div>
-            </div>
-            <div class="weui-cell">
-                <div class="weui-cell__bd">
-                    <p>添加地址赠送金币</p>
-                    <p class="g9 mt5">2018-3-17 18:13:12</p>
-                </div>
-                <div class="weui-cell__ft"><span class="gm f16">+ 5</span></div>
-            </div>
+        <div class="weui-btn-area">
+            <a class="weui-btn bgm" href="page/wealth/tx_success.jsp">确认</a>
         </div>
     </section>
 </body>
@@ -62,7 +61,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
 $(function(){
-    headerVue.title = '金币明细';
+    headerVue.title = '兑换';
 
     new Vue({
         el: '#App',
