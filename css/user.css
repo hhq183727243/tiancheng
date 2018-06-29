@@ -41,6 +41,11 @@ button, input, select, textarea {
     background-size: cover;
 }
 
+.icon-lock {
+    background: url('../image/icon/lock.png') no-repeat 0 0;
+    background-size: cover;
+}
+
 .field__item .code{ width: auto; }
 .field__item .weui-vcode-btn{
 	line-height: 18px;
